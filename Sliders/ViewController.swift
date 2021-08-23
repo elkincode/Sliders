@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var colorDisplayView: UIView!
+    
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
@@ -20,8 +21,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         colorDisplayView.layer.cornerRadius = 10
-        redSliderAction()
+        
+        colorDisplayView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
+                                                   green: CGFloat(greenSlider.value),
+                                                   blue: CGFloat(blueSlider.value),
+                                                   alpha: 1)
     }
     
     @IBAction func redSliderAction() {
@@ -38,13 +44,9 @@ class ViewController: UIViewController {
     
     func sliderAction(_ typeOfSlider: UISlider, _ typeOfLabel: UILabel) {
         
-        let redSliderValue = CGFloat(redSlider.value)
-        let greenSliderValue = CGFloat(greenSlider.value)
-        let blueSliderValue = CGFloat(blueSlider.value)
-        
-        colorDisplayView.backgroundColor = UIColor(red: redSliderValue,
-                                                   green: greenSliderValue,
-                                                   blue: blueSliderValue,
+        colorDisplayView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
+                                                   green: CGFloat(greenSlider.value),
+                                                   blue: CGFloat(blueSlider.value),
                                                    alpha: 1)
         
         typeOfLabel.text = String(format: "%.2f", typeOfSlider.value)
