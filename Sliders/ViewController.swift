@@ -20,22 +20,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         colorDisplayView.layer.cornerRadius = 10
-        // Slider
-        
-        
     }
+    
     @IBAction func redSliderAction() {
-        colorDisplayView.backgroundColor = .red
         sliderAction(redSlider, redValueLabel)
     }
     
     @IBAction func greenSliderAction() {
-        colorDisplayView.backgroundColor = .green
         sliderAction(greenSlider, greenValueLabel)
     }
     
     @IBAction func blueSliderAction() {
-        colorDisplayView.backgroundColor = .blue
         sliderAction(blueSlider, blueValueLabel)
     }
     
