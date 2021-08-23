@@ -35,10 +35,13 @@ class ViewController: UIViewController {
     }
     
     func sliderAction(_ typeOfSlider: UISlider, _ typeOfLabel: UILabel) {
+        
         let redSliderValue = CGFloat(redSlider.value)
         let greenSliderValue = CGFloat(greenSlider.value)
         let blueSliderValue = CGFloat(blueSlider.value)
+        
         colorDisplayView.backgroundColor = UIColor(red: redSliderValue, green: greenSliderValue, blue: blueSliderValue, alpha: 1)
+        
         typeOfLabel.text = String(format: "%.2f", typeOfSlider.value)
     }
 }
