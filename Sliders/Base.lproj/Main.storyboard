@@ -18,7 +18,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbU-Us-hdM">
                                 <rect key="frame" x="20" y="64" width="374" height="157"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qbU-Us-hdM" secondAttribute="height" multiplier="374:157" id="Pvf-GM-5C9"/>
                                 </constraints>

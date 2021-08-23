@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         colorDisplayView.layer.cornerRadius = 10
+        redSliderAction()
     }
     
     @IBAction func redSliderAction() {
